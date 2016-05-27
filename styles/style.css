@@ -1,0 +1,70 @@
+/*Styles for World Time Map application*/
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+body {
+    background: #055D45;
+    overflow: hidden;
+    text-align: center;
+}
+
+.favourites, .map_container {
+    display: inline-block;
+    vertical-align: top;
+    height: 100%;
+}
+.favourites {
+    width: 19%;
+    background: #ffffff;
+    margin-right: -1%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+    .favourites-delete {
+        text-align: center;
+        margin: 20px 0;
+    }
+    .favourites-delete__button {
+        background: #055D45;
+        color: #ffffff;
+        border-radius: 10px;
+        border: 1px solid #000000;
+        outline: none;
+        cursor: pointer;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+    .favourites__title {
+        font-size: calc(.4em + .5vw);
+        font-weight: bold;
+        text-align: center;
+    }
+    .favourites-list {
+        padding: 10px 0 0 10px;
+        font-size: calc(.3em + .4vw);
+        text-align: left;
+    }
+
+    .favourites-list__item {
+        margin-bottom: 10px;
+    }
+.map_container {
+    width: 80%;
+}
+
+.add-to-favourite {
+    margin: 20px 0;
+    text-align: right;
+}
+    .add-to-favourite__button {
+        background: #055D45;
+        color: #ffffff;
+        border-radius: 10px;
+        border: 1px solid #000000;
+        outline: none;
+        cursor: pointer;
+        padding: 10px;
+        box-sizing: border-box;
+    }

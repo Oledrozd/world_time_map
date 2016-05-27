@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>World Time Map</title>
+
+        <link rel="stylesheet" href="styles/style.css">
+    </head>
+    <body>
+
+
+            <div class="favourites">
+
+                <div class="favourites__title">Favourites place list</div>
+                <div class="favourites-delete">
+                    <button class="favourites-delete__button">Delete all favourites</button>
+                </div>
+
+
+                <ol class="favourites-list"></ol>
+
+            </div>
+
+            <div class="map_container"></div>
+
+
+
+
+        <script async defer
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAos2FOGD5q6Gfx-Dwh4eJchgWAz7eCIe4&callback=initMap&language=en">
+        </script>
+
+        <script src="scripts/config.js"></script>
+        <script src="scripts/request.js"></script>
+        <script src="scripts/map_initialize.js"></script>
+    </body>
+</html>
+

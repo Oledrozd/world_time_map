@@ -1,0 +1,16 @@
+{
+  "name": "wtm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "world",
+    "time",
+    "map"
+  ],
+  "author": "Oleg Drozdov",
+  "license": "ISC"
+}
