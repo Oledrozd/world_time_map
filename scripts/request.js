@@ -64,8 +64,6 @@ var request = (function () {
                             tooltipContent: infowindow.content
                         });
 
-
-
                         localStorage.favouritePlaceArray = JSON.stringify(favouritesLocation); // add array with location to local-storage
 
                         favouritesPlaceList.innerHTML = favouritesPlaceList.innerHTML + '<li class="favourites-list__item">Lat:' + params.location.lat() + '; ' + 'Lng:' + params.location.lng() + ';</li>';
@@ -73,7 +71,7 @@ var request = (function () {
                         infowindow.close();
                         marker.setOpacity(1);
 
-                        currMarkers.push(marker);
+                        currMarkers.push( marker );
                     })
 
                 });

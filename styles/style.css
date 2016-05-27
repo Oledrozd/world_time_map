@@ -68,3 +68,26 @@ body {
         padding: 10px;
         box-sizing: border-box;
     }
+
+@media screen and (max-width: 760px) {
+    .favourites, .map_container {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .map_container {
+        min-height: 70%;
+    }
+
+        .favourites-list {
+            text-align: center;
+        }
+        .favourites-list__item {
+            display: inline-block;
+            margin: 10px 10px;
+            font-size: calc(1em + .4vw);
+        }
+
+
+}

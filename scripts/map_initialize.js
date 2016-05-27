@@ -4,6 +4,7 @@ function initMap() {
 
     var favouritesDeleteBtn = document.querySelector( '.favourites-delete__button' );
 
+
     request.map = new google.maps.Map( document.querySelector('.map_container' ), {
         center: config.mapCenter,
         scrollwheel: config.mapScrollWheel,
@@ -16,21 +17,27 @@ function initMap() {
 
         for ( var i = 0; i < placeArray.length; i++ ) {
 
-            var favouritePlaceMarker = new google.maps.Marker( { position: placeArray[i].location, map: request.map } ); // add marker for favourite place from local-storage
+            (function( n ) {
 
-            var tooltip = new google.maps.InfoWindow({ //defined tooltip for favourites
+                var favouritePlaceMarker = new google.maps.Marker( { position: placeArray[n].location, map: request.map } ); // add marker for favourite place from local-storage
 
-                content: placeArray[i].tooltipContent.slice(0,  placeArray[i].tooltipContent.lastIndexOf('<div'))
-            });
+                var tooltip = new google.maps.InfoWindow({ //defined tooltip for favourites
 
-            favouritePlaceMarker.addListener( 'click', function() {
-                tooltip.open(request.map, favouritePlaceMarker);
-            });
+                    content: placeArray[n].tooltipContent.slice(0,  placeArray[n].tooltipContent.lastIndexOf('<div')) //remove button
+                });
 
-            request.favouritesPlaceArray.push(favouritePlaceMarker);
+                favouritePlaceMarker.addListener( 'click', function() {
+                    tooltip.open( request.map, favouritePlaceMarker );
+                });
 
-            // add item to favourites place list
-            request.favouritesPlaceList.innerHTML = request.favouritesPlaceList.innerHTML + '<li class="favourites-list__item">Lat:' + placeArray[i].location.lat + '; ' + 'Lng:' + placeArray[i].location.lng + ';</li>';
+                request.favouritesPlaceArray.push( favouritePlaceMarker );
+
+                // add item to favourites place list
+                request.favouritesPlaceList.innerHTML = request.favouritesPlaceList.innerHTML + '<li class="favourites-list__item">Lat:' + placeArray[n].location.lat + '; ' + 'Lng:' + placeArray[n].location.lng + ';</li>';
+
+            })(i);
+
+
         }
     }
 
